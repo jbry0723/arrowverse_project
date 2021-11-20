@@ -1,0 +1,22 @@
+
+#loadingDiv{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  img{
+    width:33%;
+    align-self: center;
+    margin-top:2%;
+  }
+  
+  #waitMessage{
+    font-size:3rem;
+    display:block;
+    align-self: center;
+    margin-top:4rem;
+    
+  }
+  

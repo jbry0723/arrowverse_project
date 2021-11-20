@@ -1,0 +1,19 @@
+#mainDiv{
+    background-color: red;
+    height:100vh;
+    width:100vw;
+}
+
+#titleHeader{
+    display:flex;
+    background-color: green;
+    height:7%;
+    justify-content: center;
+}
+
+.headerText{
+    margin: 0 0 0 0;
+    align-self:flex-end;
+    font-size:4rem;
+
+}
