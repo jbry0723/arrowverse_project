@@ -1,41 +1,33 @@
 .castButton {
-    display:flex;
-    margin: 0 0 0 0;
-    width: 99.2%;
-    color: black;
-    border-top:1px solid #454545;
-    border-bottom:1px solid #454545;
-    cursor:pointer;
-    
-  }
-  .castButton:hover {
-    color:	#084a0d;
-    border:3px solid #0d8f16;
-    box-shadow:
-    inset 0 0 50px #16d923,      /* inner white */
-    inset 20px 0 80px #16d923,   /* inner left magenta short */
-    inset -20px 0 80px #16d923,  /* inner right cyan short */
-    inset 20px 0 300px #16d923,  /* inner left magenta broad */
-    inset -20px 0 300px #16d923, /* inner right cyan broad */
+  display: flex;
+  margin: 0 0 0 0;
+  width: 99.2%;
+  color: black;
+  border-top: 1px solid #454545;
+  border-bottom: 1px solid #454545;
+  cursor: pointer;
+}
+.castButton:hover {
+  color: #084a0d;
+  border: 3px solid #0d8f16;
 }
 
-  .castButton:active {
-    color:red;
-   
-  }
-  
-  img{
-     margin:0 0 0 0;
-     width:initial;
-  }
+.castButton:active {
+  color: #d3edd9;
+  border: 3px solid #d3edd9;
+}
 
-  .castButtonTitle{
-      display:inline;
-      align-self:center;
-      font-size:1rem;
-      margin-left:2rem;
-      margin-right:2rem;
-      font-size: 1.5rem;
-     
-  }
-  
+img {
+  margin: 0 0 0 0;
+  width: initial;
+}
+
+.castButtonTitle {
+  display: inline;
+  align-self: center;
+  font-size: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  user-select: none;
+}

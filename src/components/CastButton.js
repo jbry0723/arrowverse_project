@@ -5,7 +5,7 @@ function CastButton(props) {
   return (
     <div className="castButton">
       <img src={castImg} alt="cast member"></img>
-        <p className="castButtonTitle">{castName} as {charName}</p>
+        <p  className="castButtonTitle">{castName} as {charName}</p>
     </div>
   );
 }

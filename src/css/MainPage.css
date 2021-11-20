@@ -15,6 +15,23 @@
   justify-content: center;
 }
 
+#windowHeaderContainer {
+  position: fixed;
+  width: 100vw;
+  height: 3vh;
+  margin-top: 10vh;
+  background-color: #e8e6e6;
+  display: flex;
+  justify-content: center;
+}
+.windowHeader {
+  background-color: #e8e6e6;
+  width: 50%;
+  border-right: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
 .headerText {
   position: fixed;
   margin: 0 0 0 0;
@@ -31,7 +48,6 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  min-height: 1024px;
 }
 
 #castWindow {
@@ -41,17 +57,6 @@
   margin-top: 10vh;
   border-left: 2px solid black;
   overflow-y: scroll;
-  min-height: 1024px;
-}
-
-.windowHeaders {
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  border-bottom: 3px solid black;
-  width: 50%;
-  height: 3vh;
-  position: fixed;
 }
 
 h2 {
@@ -84,20 +89,12 @@ h3 {
 
 .castListContainer {
   margin-top: 3%;
-  min-height: 1024px;
-}
-
-#infoHeader{
-    width:50.3%;
 }
 
 @media (max-width: 1700px) {
   .infoText {
     margin-top: 0.5rem;
     font-size: 1.3rem;
-  }
-  #infoHeader{
-      width:49.8%;
   }
 }
 @media (max-width: 1400px) {
