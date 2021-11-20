@@ -1,16 +1,18 @@
 import "../css/MainPage.css";
+import CastButton from "./CastButton";
 
 function MainPage(props) {
   let { showData, castData } = props;
   console.log(showData);
   console.log(castData);
+  
   return (
     <main id="mainDiv">
       <header id="titleHeader">
         <h1 className="headerText"> {showData.name}</h1>
       </header>
       <section id="infoWindow">
-        <header className="windowHeaders">
+        <header id="infoHeader" className="windowHeaders">
           <h2>Information</h2>
         </header>
         <h3>Title: {showData.name}</h3>
@@ -42,8 +44,17 @@ function MainPage(props) {
         <header className="windowHeaders">
           <h2>Cast</h2>
         </header>
-        <div id="castListContainer">
-       
+        <div className="castListContainer">
+        {castData.map((castMember) => {
+          return (
+            <CastButton 
+            key={castMember.person.name+castMember.person.id}
+            castImg= {castMember.character.image.medium}
+            castName={castMember.person.name}
+            charName={castMember.character.name}
+            />
+          );
+        })}
         </div>
       </section>
     </main>

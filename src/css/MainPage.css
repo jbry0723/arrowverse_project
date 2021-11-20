@@ -2,6 +2,8 @@
   display: flex;
   height: 100vh;
   width: 100vw;
+  min-width: 768px;
+  min-height: 1024px;
 }
 
 #titleHeader {
@@ -29,6 +31,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  min-height: 1024px;
 }
 
 #castWindow {
@@ -37,6 +40,8 @@
   width: 50vw;
   margin-top: 10vh;
   border-left: 2px solid black;
+  overflow-y: scroll;
+  min-height: 1024px;
 }
 
 .windowHeaders {
@@ -44,9 +49,9 @@
   justify-content: center;
   background-color: white;
   border-bottom: 3px solid black;
-  width:50%;
-  height:3%;
-  position:fixed;
+  width: 50%;
+  height: 3vh;
+  position: fixed;
 }
 
 h2 {
@@ -55,12 +60,13 @@ h2 {
 }
 
 h3 {
+  margin-top: 3rem;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
 .infoText {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   font-size: 1.5rem;
 }
 
@@ -71,63 +77,39 @@ h3 {
 }
 
 #summaryContainer {
-  margin: 0 5rem 0 5rem;
+  margin: 0 6rem 0 6rem;
   text-align: justify;
   text-justify: inter-character;
 }
 
-#castListContainer{
-    margin-top:3.1%;
-    margin-left:0;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    
-}
-.castButton{
-    margin:0 0 0 0;
-    width:50rem;
-    color:red;
+.castListContainer {
+  margin-top: 3%;
+  min-height: 1024px;
 }
 
-@media (max-height: 900px) {
-  #mainDiv {
-    height: auto;
-  }
+#infoHeader{
+    width:50.3%;
+}
 
-  #summaryContainer {
-    margin-bottom: 2rem;
+@media (max-width: 1700px) {
+  .infoText {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
   }
-  #castWindow {
-    height: auto;
-  }
-  #infoWindow {
-    height: auto;
+  #infoHeader{
+      width:49.8%;
   }
 }
-@media (max-width: 1000px) {
-  #mainDiv {
-    height: auto;
-  }
-
-  #summaryContainer {
-    margin-bottom: 2rem;
-  }
-
-  #castWindow {
-    height: auto;
-  }
-  #infoWindow {
-    height: auto;
+@media (max-width: 1400px) {
+  .infoText {
+    margin-top: 0.35rem;
+    font-size: 1.1rem;
   }
 }
 
-@media (min-width: 1800px) {
-  #summaryHeader {
-    margin-top: 3rem;
-  }
-  #summaryContainer {
-    margin: 0 12rem 2rem 12rem;
+@media (max-width: 1300px) {
+  .infoText {
+    margin-top: 0.3rem;
+    font-size: 1rem;
   }
 }
