@@ -1,19 +1,133 @@
-#mainDiv{
-    background-color: red;
-    height:100vh;
-    width:100vw;
+#mainDiv {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
-#titleHeader{
+#titleHeader {
+  position: fixed;
+  display: flex;
+  background-color: green;
+  width: 100vw;
+  height: 10vh;
+  justify-content: center;
+}
+
+.headerText {
+  position: fixed;
+  margin: 0 0 0 0;
+  align-self: flex-end;
+  font-size: 4rem;
+}
+
+#infoWindow {
+  background-color: gray;
+  height: 90vh;
+  width: 50vw;
+  margin-top: 10vh;
+  border-right: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#castWindow {
+  background-color: gray;
+  height: 90vh;
+  width: 50vw;
+  margin-top: 10vh;
+  border-left: 2px solid black;
+}
+
+.windowHeaders {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-bottom: 3px solid black;
+  width:50%;
+  height:3%;
+  position:fixed;
+}
+
+h2 {
+  margin: 0 0 0 0;
+  align-self: center;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoText {
+  margin-top: .5rem;
+  font-size: 1.5rem;
+}
+
+#summaryHeader {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#summaryContainer {
+  margin: 0 5rem 0 5rem;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+#castListContainer{
+    margin-top:3.1%;
+    margin-left:0;
     display:flex;
-    background-color: green;
-    height:7%;
+    flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
+    
+}
+.castButton{
+    margin:0 0 0 0;
+    width:50rem;
+    color:red;
 }
 
-.headerText{
-    margin: 0 0 0 0;
-    align-self:flex-end;
-    font-size:4rem;
+@media (max-height: 900px) {
+  #mainDiv {
+    height: auto;
+  }
 
+  #summaryContainer {
+    margin-bottom: 2rem;
+  }
+  #castWindow {
+    height: auto;
+  }
+  #infoWindow {
+    height: auto;
+  }
+}
+@media (max-width: 1000px) {
+  #mainDiv {
+    height: auto;
+  }
+
+  #summaryContainer {
+    margin-bottom: 2rem;
+  }
+
+  #castWindow {
+    height: auto;
+  }
+  #infoWindow {
+    height: auto;
+  }
+}
+
+@media (min-width: 1800px) {
+  #summaryHeader {
+    margin-top: 3rem;
+  }
+  #summaryContainer {
+    margin: 0 12rem 2rem 12rem;
+  }
 }
