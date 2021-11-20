@@ -1,12 +1,19 @@
 import "../css/MainPage.css";
 import CastButton from "./CastButton";
+import LoadingScreen from "./LoadingScreen";
 
 function MainPage(props) {
-  let { showData, castData } = props;
+  let { showData, castData, isLoading } = props;
   console.log(showData);
   console.log(castData);
 
-  return (
+  if (isLoading) {
+    return (
+      <LoadingScreen/>
+    );
+  } else {
+    return( 
+  
     <main id="mainDiv">
       <header id="titleHeader">
         <h1 className="headerText"> {showData.name}</h1>
@@ -50,7 +57,7 @@ function MainPage(props) {
           {castData.map((castMember) => {
             return (
               <CastButton
-                key={castMember.person.name + castMember.person.id}
+                key={Math.random()*castMember.person.id }
                 castImg={castMember.character.image.medium}
                 castName={castMember.person.name}
                 charName={castMember.character.name}
@@ -61,5 +68,7 @@ function MainPage(props) {
       </section>
     </main>
   );
+}
+
 }
 export default MainPage;

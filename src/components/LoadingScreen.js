@@ -6,7 +6,7 @@ function LoadingScreen() {
   return (
     <main id="loadingDiv">
       <h2 id="waitMessage">Please Wait</h2>
-      <img src={loadIcon} alt="Loading Icon" />
+      <img id="loadingImg" src={loadIcon} alt="Loading Icon" />
     </main>
   );
 }

@@ -13,6 +13,7 @@
   width: 100vw;
   height: 10vh;
   justify-content: center;
+  
 }
 
 #windowHeaderContainer {
@@ -36,7 +37,7 @@
   position: fixed;
   margin: 0 0 0 0;
   align-self: flex-end;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 #infoWindow {
@@ -62,6 +63,7 @@
 h2 {
   margin: 0 0 0 0;
   align-self: center;
+  font-size: 1.2rem;
 }
 
 h3 {
@@ -96,6 +98,10 @@ h3 {
     margin-top: 0.5rem;
     font-size: 1.3rem;
   }
+ 
+
+  
+
 }
 @media (max-width: 1400px) {
   .infoText {

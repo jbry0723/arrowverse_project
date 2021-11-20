@@ -1,13 +1,17 @@
 import "./css/App.css";
 import React, { useState, useEffect } from "react";
 import { getShowData, getCastData } from "./api";
-import LoadingScreen from "./components/LoadingScreen";
-import MainPage from "./components/MainPage"
+import { Route, Routes } from "react-router-dom";
 
+import MainPage from "./components/MainPage";
+import CastPage from "./components/CastPage";
 
 function App() {
-  const [data, setData] = useState({ showData: [], castData: [] });
-  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({
+    showData: [],
+    castData: [],
+    isLoading: true,
+  });
 
   useEffect(() => {
     async function makeAPICalls() {
@@ -27,10 +31,10 @@ function App() {
           console.log(err);
           window.alert("Error retrieving cast data");
         });
-      
-      setData({ showData: showResp, castData: castResp });
+
+      console.log("DATA SET");
       if (showResp && castResp) {
-        setIsLoading(false);
+        setData({ showData: showResp, castData: castResp, isLoading: false });
       }
     }
     makeAPICalls();
@@ -40,12 +44,21 @@ function App() {
     console.log("hit");
   });
 
-  if (isLoading) {
-    return (
-      <LoadingScreen/>
-    );
-  } else {
-    return( <MainPage showData={data.showData} castData={data.castData} />
-  )}
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <MainPage
+            isLoading={data.isLoading}
+            showData={data.showData}
+            castData={data.castData}
+          />
+        }
+      />
+      <Route path="/cast/:id" element={<CastPage castData={data.castData} />} />
+    </Routes>
+  );
 }
+
 export default App;
