@@ -6,16 +6,6 @@
   min-height: 1024px;
 }
 
-#titleHeader {
-  position: fixed;
-  display: flex;
-  background-color: green;
-  width: 100vw;
-  height: 10vh;
-  justify-content: center;
-  
-}
-
 #windowHeaderContainer {
   position: fixed;
   width: 100vw;
@@ -31,13 +21,6 @@
   border-right: 2px solid black;
   display: flex;
   justify-content: center;
-}
-
-.headerText {
-  position: fixed;
-  margin: 0 0 0 0;
-  align-self: flex-end;
-  font-size: 3.5rem;
 }
 
 #infoWindow {
@@ -98,10 +81,6 @@ h3 {
     margin-top: 0.5rem;
     font-size: 1.3rem;
   }
- 
-
-  
-
 }
 @media (max-width: 1400px) {
   .infoText {

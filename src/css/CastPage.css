@@ -1,0 +1,14 @@
+.castMainDiv{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   padding-top:10vh;
+   background-color: gray;
+   height:100vh;
+   overflow-y:scroll;
+}
+
+#castImg{
+    width:35vh;
+    border-radius:5% 5% 5% 5%;
+}

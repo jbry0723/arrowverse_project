@@ -32,4 +32,7 @@ img {
   user-select: none;
 }
 
-
+a{
+  color:none;
+  text-decoration:none;
+}

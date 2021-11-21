@@ -2,6 +2,7 @@ import "./css/App.css";
 import React, { useState, useEffect } from "react";
 import { getShowData, getCastData } from "./api";
 import { Route, Routes } from "react-router-dom";
+import TitleHeader from "./components/TitleHeader";
 
 import MainPage from "./components/MainPage";
 import CastPage from "./components/CastPage";
@@ -45,6 +46,8 @@ function App() {
   });
 
   return (
+    <div className="App">
+    <TitleHeader/>
     <Routes>
       <Route
         path="/"
@@ -56,9 +59,12 @@ function App() {
           />
         }
       />
-      <Route path="/cast/:id" element={<CastPage castData={data.castData} />} />
+      <Route path="/cast/:id" element={<CastPage isLoading={data.isLoading} castData={data.castData} />} />
     </Routes>
+    </div>
   );
+  
 }
+
 
 export default App;

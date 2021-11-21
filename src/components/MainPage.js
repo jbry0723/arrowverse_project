@@ -15,9 +15,7 @@ function MainPage(props) {
     return( 
   
     <main id="mainDiv">
-      <header id="titleHeader">
-        <h1 className="headerText"> {showData.name}</h1>
-      </header>
+      
       <header id="windowHeaderContainer">
         <div className="windowHeader">
           <h2>Information</h2>
@@ -61,6 +59,7 @@ function MainPage(props) {
                 castImg={castMember.character.image.medium}
                 castName={castMember.person.name}
                 charName={castMember.character.name}
+                charId={castMember.character.id}
               />
             );
           })}
