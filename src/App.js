@@ -12,10 +12,15 @@ function App() {
     showData: [],
     castData: [],
     isLoading: true,
+    csvFile: null,
   });
 
   useEffect(() => {
+
+    
     async function makeAPICalls() {
+
+     
       let showResp = await getShowData()
         .then((res) => {
           return res.data;
@@ -32,10 +37,28 @@ function App() {
           console.log(err);
           window.alert("Error retrieving cast data");
         });
-
-      console.log("DATA SET");
       if (showResp && castResp) {
-        setData({ showData: showResp, castData: castResp, isLoading: false });
+        let castCopy = castResp.map((entry) => {
+          return entry.person;
+        })
+        let csv=JSON.parse(JSON.stringify(castCopy))
+        csv.forEach((entry)=>{
+          if(entry.country!==null){
+          entry.country=entry.country.name
+          }
+          entry.image=entry.image.original
+          entry._links=entry._links.self.href
+      })
+      castResp.forEach((entry)=>{
+        csv[castResp.indexOf(entry)].charUrl=entry.character.url
+        csv[castResp.indexOf(entry)].charName=entry.character.name
+        csv[castResp.indexOf(entry)].charId=entry.character.id
+        csv[castResp.indexOf(entry)].charImage=entry.character.image.original
+      })
+        
+        console.log("csv",csv, Array.isArray(csv))
+        console.log("castResp",castResp)
+        setData({ showData: showResp, castData: castResp, isLoading: false, csvFile: csv});
       }
     }
     makeAPICalls();
@@ -47,24 +70,28 @@ function App() {
 
   return (
     <div className="App">
-    <TitleHeader/>
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <MainPage
-            isLoading={data.isLoading}
-            showData={data.showData}
-            castData={data.castData}
-          />
-        }
-      />
-      <Route path="/cast/:id" element={<CastPage isLoading={data.isLoading} castData={data.castData} />} />
-    </Routes>
+      <TitleHeader />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <MainPage
+              isLoading={data.isLoading}
+              showData={data.showData}
+              castData={data.castData}
+              csvFile={data.csvFile}
+            />
+          }
+        />
+        <Route
+          path="/cast/:id"
+          element={
+            <CastPage isLoading={data.isLoading} castData={data.castData} />
+          }
+        />
+      </Routes>
     </div>
   );
-  
 }
-
 
 export default App;

@@ -2,6 +2,7 @@ import "../css/CastPage.css";
 import { useParams } from "react-router-dom";
 import LoadingScreen from "./LoadingScreen";
 
+
 function CastPage(props) {
   let { id } = useParams();
   let { castData, isLoading } = props;
@@ -9,7 +10,6 @@ function CastPage(props) {
 
   let selectedCast =
     castData[castData.map((castMember) => castMember.character.id).indexOf(id)];
-  console.log(selectedCast);
 
   if (isLoading) {
     return <LoadingScreen />;
@@ -25,10 +25,10 @@ function CastPage(props) {
         <h3 id="characterName">as {selectedCast.character.name}</h3>
         <div id="castInfoContainer">
           <p className="castInfoText">
-            Nationality:{selectedCast.person.country.name}
+            Nationality:{selectedCast.person.country?.name}
           </p>
           <p className="castInfoText">
-            Birtdate: {selectedCast.person.birthday}
+            Birtdate: {selectedCast.person?.birthday}
           </p>
           <p className="castInfoText">Gender: {selectedCast.person.gender}</p>
 
@@ -37,14 +37,10 @@ function CastPage(props) {
             rel="noreferrer"
             target="_blank"
             id="tvMazeLink"
-            className="castButtons"
             type="button"
           >
             More Info Via TvMaze
           </a>
-          <button className="castButtons">
-            Download Information (.csv format)
-          </button>
         </div>
       </div>
     );
