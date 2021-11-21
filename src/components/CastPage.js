@@ -22,7 +22,30 @@ function CastPage(props) {
           src={selectedCast.person.image?.original}
           alt="cast member"
         ></img>
-        <h3>as {selectedCast.character.name}</h3>
+        <h3 id="characterName">as {selectedCast.character.name}</h3>
+        <div id="castInfoContainer">
+          <p className="castInfoText">
+            Nationality:{selectedCast.person.country.name}
+          </p>
+          <p className="castInfoText">
+            Birtdate: {selectedCast.person.birthday}
+          </p>
+          <p className="castInfoText">Gender: {selectedCast.person.gender}</p>
+
+          <a
+            href={`${selectedCast.person.url}`}
+            rel="noreferrer"
+            target="_blank"
+            id="tvMazeLink"
+            className="castButtons"
+            type="button"
+          >
+            More Info Via TvMaze
+          </a>
+          <button className="castButtons">
+            Download Information (.csv format)
+          </button>
+        </div>
       </div>
     );
   }
