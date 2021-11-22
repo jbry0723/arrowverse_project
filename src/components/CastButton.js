@@ -8,8 +8,8 @@ function CastButton(props) {
   return (
       <Link to= {`/cast/${charId}`}>
     <div className="castButton">
-      <img src={castImg} alt="Arrow character"></img>
-        <p  className="castButtonTitle">{castName} as {charName}</p>
+      <img src={castImg} alt="Arrow character" id="castButtonImg"></img>
+        <p  className="castButtonTitle"><span className="castName">{castName}</span> as {charName}</p>
     </div>
     </Link>
   );

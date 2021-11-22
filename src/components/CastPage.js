@@ -25,7 +25,7 @@ function CastPage(props) {
         <h3 id="characterName">as {selectedCast.character.name}</h3>
         <div id="castInfoContainer">
           <p className="castInfoText">
-            Nationality:{selectedCast.person.country?.name}
+            Nationality: {selectedCast.person.country?.name}
           </p>
           <p className="castInfoText">
             Birtdate: {selectedCast.person?.birthday}

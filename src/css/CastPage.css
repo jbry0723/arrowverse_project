@@ -14,6 +14,7 @@
 }
 
 #castNameHeader {
+  font-size:3rem;
   margin-top: 1.5rem;
 }
 
@@ -51,4 +52,29 @@
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #cccccc;
+}
+
+
+
+@media (max-width: 750px) {
+  #castImg {
+    width: 25vh;
+  }
+  #castNameHeader {
+    font-size: 2rem;
+    margin-bottom:.5rem;
+  }
+  #characterName {
+    font-size: 1.25rem;
+  }
+
+  .castInfoText {
+    font-size: 1.25rem;
+    margin-top:.35rem;
+    margin-bottom:.35rem;
+  }
+
+  #tvMazeLink{
+    margin-top:2rem;
+  }
 }

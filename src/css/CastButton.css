@@ -17,10 +17,7 @@
   border: 3px solid #d3edd9;
 }
 
-img {
-  margin: 0 0 0 0;
-  width: initial;
-}
+
 
 .castButtonTitle {
   display: inline;
@@ -32,7 +29,29 @@ img {
   user-select: none;
 }
 
-a{
-  color:none;
-  text-decoration:none;
+a {
+  color: none;
+  text-decoration: none;
+}
+
+.castName{
+  font-weight:bold;
+}
+
+
+@media (max-width: 1300px) {
+  #castButtonImg{
+    width:10rem;
+    
+  }
+}
+
+@media (max-width: 750px) {
+  #castButtonImg {
+    width: 8rem;
+  }
+
+  .castButtonTitle {
+    font-size: 1rem;
+  }
 }
