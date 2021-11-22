@@ -1,20 +1,17 @@
 body {
   margin: 0 0 0 0;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
   overflow-x: hidden;
-
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-html{
-  margin:0 0 0 0;
+html {
+  margin: 0 0 0 0;
 }
-
-

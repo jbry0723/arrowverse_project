@@ -1,6 +1,5 @@
-import "../css/LoadingScreen.css"
+import "../css/LoadingScreen.css";
 import loadIcon from "../Icons/loading_s.gif";
-
 
 function LoadingScreen() {
   return (

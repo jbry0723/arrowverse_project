@@ -4,22 +4,19 @@ import React, { useState } from "react";
 import LoadingScreen from "./LoadingScreen";
 import { CSVLink } from "react-csv";
 
-
 function MainPage(props) {
-    const [drawerToggle, setDrawerToggle] = useState(true)
+  const [drawerToggle, setDrawerToggle] = useState(false);
   let { showData, castData, isLoading, csvFile } = props;
 
-  
+  let openDrawer = (e) => {
+    e.preventDefault();
+    setDrawerToggle(true);
+  };
 
-  let openDrawer=(e)=>{
-      e.preventDefault()
-      setDrawerToggle(true)
-  }
-
-  let closeDrawer=(e)=>{
-    e.preventDefault()
-    setDrawerToggle(false)
-}
+  let closeDrawer = (e) => {
+    e.preventDefault();
+    setDrawerToggle(false);
+  };
 
   const closedDrawer = {
     maxWidth: "0",
@@ -37,10 +34,18 @@ function MainPage(props) {
     return (
       <main id="mainDiv">
         <nav id="mobileHeader">
-          <div className="windowHeader" onClick={openDrawer} id={drawerToggle ? "activeMobileButton" : "inactiveMobileButton"}>
+          <div
+            className="windowHeader"
+            onClick={openDrawer}
+            id={drawerToggle ? "activeMobileButton" : "inactiveMobileButton"}
+          >
             <h2>Information</h2>
           </div>
-          <div className="windowHeader" onClick={closeDrawer} id={drawerToggle ?   "inactiveMobileButton":"activeMobileButton"}>
+          <div
+            className="windowHeader"
+            onClick={closeDrawer}
+            id={drawerToggle ? "inactiveMobileButton" : "activeMobileButton"}
+          >
             <h2>Cast</h2>
           </div>
         </nav>
@@ -53,24 +58,35 @@ function MainPage(props) {
           </div>
         </header>
         <section
-          style={(drawerToggle === true) ? openedDrawer : closedDrawer}
+          style={drawerToggle === true ? openedDrawer : closedDrawer}
           id="infoWindow"
         >
           <h3>{showData.name}</h3>
           <p className="infoText">
-            <span className="infoLabel">Genre:{" "}</span>
+            <span className="infoLabel">Genre: </span>
             {showData.genres
               .map((genre) => {
                 return " " + genre;
               })
               .toString()}
           </p>
-          <p className="infoText"><span className="infoLabel">Premiered:</span> {showData.premiered}</p>
-          <p className="infoText"><span className="infoLabel">Ended:</span> {showData.ended}</p>
+          <p className="infoText">
+            <span className="infoLabel">Premiered:</span> {showData.premiered}
+          </p>
+          <p className="infoText">
+            <span className="infoLabel">Ended:</span> {showData.ended}
+          </p>
 
-          <p className="infoText"><span className="infoLabel">Network:</span> {showData.network?.name}</p>
-          <p className="infoText"><span className="infoLabel">Runtime:</span> {showData.runtime} Minutes</p>
-          <p className="infoText"><span className="infoLabel">Type:</span> {showData.type}</p>
+          <p className="infoText">
+            <span className="infoLabel">Network:</span> {showData.network?.name}
+          </p>
+          <p className="infoText">
+            <span className="infoLabel">Runtime:</span> {showData.runtime}{" "}
+            Minutes
+          </p>
+          <p className="infoText">
+            <span className="infoLabel">Type:</span> {showData.type}
+          </p>
 
           <p className="infoText" id="summaryHeader">
             Summary:

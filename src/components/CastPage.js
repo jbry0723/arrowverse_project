@@ -2,7 +2,6 @@ import "../css/CastPage.css";
 import { useParams } from "react-router-dom";
 import LoadingScreen from "./LoadingScreen";
 
-
 function CastPage(props) {
   let { id } = useParams();
   let { castData, isLoading } = props;

@@ -57,8 +57,6 @@ function App() {
         });
       if (showResp && castResp) {
         let csv = await prepareCSV();
-        console.log("csv", csv, Array.isArray(csv));
-        console.log("castResp", castResp);
         setData({
           showData: showResp,
           castData: castResp,
@@ -69,10 +67,6 @@ function App() {
     }
     makeAPICalls();
   }, []);
-
-  useEffect(() => {
-    console.log("hit");
-  });
 
   return (
     <div className="App">

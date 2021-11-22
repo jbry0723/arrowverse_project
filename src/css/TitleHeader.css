@@ -1,14 +1,13 @@
-#arrowLogo{
-  margin-bottom:.5rem;
-  margin-top:.5rem;
+#arrowLogo {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-  #titleHeader {
-    position: fixed;
-    display: flex;
-    background-color: #2f3e46;
-    width: 100vw;
-    height: 10vh;
-    justify-content: center;
-    
-  }
+#titleHeader {
+  position: fixed;
+  display: flex;
+  background-color: #2f3e46;
+  width: 100vw;
+  height: 10vh;
+  justify-content: center;
+}
