@@ -98,4 +98,10 @@
   #tvMazeLink {
     margin-top: 2rem;
   }
+
+  #characterName {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
 }
