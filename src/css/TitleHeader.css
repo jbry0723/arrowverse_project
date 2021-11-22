@@ -10,4 +10,5 @@
   width: 100vw;
   height: 10vh;
   justify-content: center;
+  z-index: 1;
 }
