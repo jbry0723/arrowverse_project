@@ -1,14 +1,12 @@
-.headerText {
-    position: fixed;
-    margin: 0 0 0 0;
-    align-self: flex-end;
-    font-size: 3.5rem;
-  }
+#arrowLogo{
+  margin-bottom:.5rem;
+  margin-top:.5rem;
+}
 
   #titleHeader {
     position: fixed;
     display: flex;
-    background-color: green;
+    background-color: #2f3e46;
     width: 100vw;
     height: 10vh;
     justify-content: center;

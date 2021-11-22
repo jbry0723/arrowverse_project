@@ -58,19 +58,19 @@ function MainPage(props) {
         >
           <h3>{showData.name}</h3>
           <p className="infoText">
-            Genre:{" "}
+            <span className="infoLabel">Genre:{" "}</span>
             {showData.genres
               .map((genre) => {
                 return " " + genre;
               })
               .toString()}
           </p>
-          <p className="infoText">Premiered: {showData.premiered}</p>
-          <p className="infoText">Ended: {showData.ended}</p>
+          <p className="infoText"><span className="infoLabel">Premiered:</span> {showData.premiered}</p>
+          <p className="infoText"><span className="infoLabel">Ended:</span> {showData.ended}</p>
 
-          <p className="infoText">Network: {showData.network?.name}</p>
-          <p className="infoText">Runtime: {showData.runtime} Minutes</p>
-          <p className="infoText">Type: {showData.type}</p>
+          <p className="infoText"><span className="infoLabel">Network:</span> {showData.network?.name}</p>
+          <p className="infoText"><span className="infoLabel">Runtime:</span> {showData.runtime} Minutes</p>
+          <p className="infoText"><span className="infoLabel">Type:</span> {showData.type}</p>
 
           <p className="infoText" id="summaryHeader">
             Summary:

@@ -10,10 +10,11 @@
   position: fixed;
   width: 100vw;
   height: 3vh;
-  margin-top: 10vh;
+  margin-top: 9.9vh;
   background-color: #e8e6e6;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 #mobileHeader {
@@ -26,15 +27,16 @@
   justify-content: center;
 }
 .windowHeader {
-  background-color: #e8e6e6;
+  background-color: #84a98c;
   width: 50%;
   border-right: 2px solid black;
   display: flex;
   justify-content: center;
+  color: #2f3e46;
 }
 
 #infoWindow {
-  background-color: gray;
+  background-color: #cad2c5;
   height: 90vh;
   width: 50vw;
   margin-top: 10vh;
@@ -45,7 +47,7 @@
 }
 
 #castWindow {
-  background-color: gray;
+  background-color: #cad2c5;
   height: 90vh;
   width: 50vw;
   margin-top: 10vh;
@@ -63,6 +65,7 @@ h3 {
   margin-top: 3rem;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: #2f3e46;
 }
 
 .infoText {
@@ -74,6 +77,8 @@ h3 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #2f3e46;
 }
 
 #summaryContainer {
@@ -83,30 +88,37 @@ h3 {
 }
 
 .castListContainer {
-  margin-top: 3vh;
+  margin-top: 2.8vh;
 }
 
 #CSVbutton {
   align-self: center;
   width: 30vw;
-  height:3vh;
+  height: 5vh;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.3rem;
-  font: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-decoration: none;
-  background-color: #eeeeee;
-  color: #333333;
+  background-color: #84a98c;
+  color: #2f3e46;
   padding: 2px 6px 2px 6px;
   border-top: 1px solid #cccccc;
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #cccccc;
   align-content: center;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 30px;
+  box-shadow: rgb(38, 57, 77) 08px 20px 30px -10px;
+}
+
+.infoLabel {
+  font-weight: bold;
+  color: #2f3e46;
 }
 
 @media (max-width: 1700px) {
@@ -114,7 +126,6 @@ h3 {
     margin-top: 0.5rem;
     font-size: 1.3rem;
   }
-  
 }
 @media (max-width: 1400px) {
   .infoText {
@@ -124,11 +135,9 @@ h3 {
   }
   #CSVbutton {
     width: 30vw;
-    
   }
   #summaryContainer {
     margin: 0 4.5rem 0 4.5rem;
-
   }
 }
 
@@ -168,14 +177,19 @@ h3 {
     display: flex;
     z-index: 2;
   }
+  #activeMobileButton {
+    background-color: #354f52;
+    color: #1d2a2b;
+    box-shadow: rgb(37, 38, 37) 3px 3px 6px 0px inset;
+  }
+
+  #inactiveMobileButton{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
 
   #castWindow {
     width: 100vw;
     height: 100vh;
-  }
-
-  #activeMobileButton {
-    background-color: #b3b3b3;
   }
 
   #castWindow {
@@ -187,7 +201,7 @@ h3 {
 
   .infoText {
     margin-top: 0rem;
-    margin-bottom:.3rem
+    margin-bottom: 0.3rem;
   }
   #summaryHeader {
     margin-top: 0;
@@ -204,17 +218,20 @@ h3 {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  h3{
+  h3 {
     margin-top: 2.5rem;
-    margin-bottom:0rem;
+    margin-bottom: 0rem;
   }
 }
 
 @media (max-height: 700px) {
   #CSVbutton {
-    font-size:1rem;
+    font-size: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 5rem;
+  }
+  #infoWindow {
+    height: 90vh;
   }
 }
 

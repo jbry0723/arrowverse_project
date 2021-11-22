@@ -1,10 +1,11 @@
 import "../css/TitleHeader.css";
+import arrowLogo from "../Icons/arrowLogo.png";
 
 function TitleHeader(props) {
   return (
     <header id="titleHeader">
-        <h1 className="headerText"> Arrow </h1>
-      </header>
+      <img id="arrowLogo" src={arrowLogo} alt="logo for Arrow TV show"></img>
+    </header>
   );
 }
 export default TitleHeader;
