@@ -3,7 +3,9 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  padding-top: 6%;
+  
+  background-color: #cad2c5;
+  height:100vh;
 }
 
 #loadingImg {
@@ -18,3 +20,5 @@
   align-self: center;
   margin-top: 4rem;
 }
+
+
