@@ -60,7 +60,7 @@ function App() {
         setData({
           showData: showResp,
           castData: castResp,
-          isLoading: true,
+          isLoading: false,
           csvFile: csv,
         });
       }
